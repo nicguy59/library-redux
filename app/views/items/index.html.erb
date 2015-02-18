@@ -1,11 +1,12 @@
 <h1>Items in the Library</h1>
 
+<p>
+  We have <%= @items.count %> Items! </p>
+
+<p>
 <% @items.each do |item| %>
 
-  <p>
-  We have <% @items.count %> Items! </p>
-
-  <%= link_to(item.name, item_path(item)) %>
-  </p>
+<%= link_to(item.title, item_path(item)) %>
+</p>
 
   <% end %>

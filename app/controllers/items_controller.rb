@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
    def index
-    @items = Item.order('name ASC') #name sorted 'Ascending'
+    @items = Item.order('title ASC') #name sorted 'Ascending'
   end
 
   def show
@@ -42,7 +42,7 @@ class ItemsController < ApplicationController
 
   private
     def item_params
-      params.require(:item).permit(:name, :body, :item_type)
+      params.require(:item).permit(:title, :item_type)
     end
 
  end
