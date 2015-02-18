@@ -17,13 +17,18 @@ ActiveRecord::Schema.define(version: 20150218223004) do
   enable_extension "plpgsql"
 
   create_table "item_types", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "items", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "item_type_id"
+    t.string   "title"
+    t.string   "image_url"
+    t.date     "completed_on"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end
