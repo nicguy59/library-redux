@@ -1,12 +1,20 @@
 <h1>Items in the Library</h1>
 
-<p>
-  We have <%= @items.count %> Items! </p>
+<p>We have <%= @items.count %> Items!</p>
 
-<p>
+
+<p><%= link_to 'New Item', new_item_path %></p>
+<br>
 <% @items.each do |item| %>
-
+<h3><%= item.item_type.name %>: <%= item.title %></h3>
+<p><%= simple_format(item.body) %></p>
+<p>
+<%= link_to 'Edit', edit_item_path(item) %>
+*
+<%= link_to 'Delete', item_path(item), method: :delete %>
+</p>
+<p>
 <%= link_to(item.title, item_path(item)) %>
 </p>
 
-  <% end %>
+<% end %>
