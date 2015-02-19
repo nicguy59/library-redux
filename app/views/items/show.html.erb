@@ -1,0 +1,13 @@
+<h1><%= @items.title %></h1>
+
+This is a
+<%= @items.item_type.name %>
+</p>
+
+<p>
+<%= @items.body %>
+</p>
+<p>Completed on: <%= (@items.completed_on) %>.</p>
+
+<hr>
+<p><%= link_to 'Home', root_path %></p>

@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150218223004) do
   create_table "items", force: :cascade do |t|
     t.integer  "item_type_id"
     t.string   "title"
+    t.text     "body"
     t.string   "image_url"
     t.date     "completed_on"
     t.datetime "created_at",   null: false
