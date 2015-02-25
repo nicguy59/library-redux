@@ -14,6 +14,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    @item.get_image
       if @item.save
         redirect_to items_path
       else
@@ -27,6 +28,7 @@ class ItemsController < ApplicationController
 
   def update
     @item = Item.find(params[:id])
+    @item.get_image unless !@item.image_url.nil?
       if @item.update_attributes(item_params)
         redirect_to items_path
       else

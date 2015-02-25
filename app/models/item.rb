@@ -5,4 +5,9 @@ class Item < ActiveRecord::Base
   def completed?
     !completed_on.nil?
   end
+
+  def get_image
+    puts "Get an Image!"
+    update_attribute(:image_url, ImageFetcher.new.fetch(title))
+  end
 end
