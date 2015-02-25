@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
    def index
-    @items = Item.order('title ASC') #name sorted 'Ascending'
+    @items = Item.order('title ASC') #title sorted 'Ascending'
   end
 
   def show
@@ -14,11 +14,11 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    @item.get_image
       if @item.save
-        redirect_to items_path
+         @item.get_image
+         redirect_to items_path
       else
-        render :new
+        render 'new'
     end
   end
 
@@ -32,14 +32,14 @@ class ItemsController < ApplicationController
       if @item.update_attributes(item_params)
         redirect_to items_path
       else
-        render :edit
+        render 'new'
       end
   end
 
   def destroy
     @item = Item.find(params[:id])
-      @item.destroy
-        redirect_to items_path
+    @item.destroy
+    redirect_to items_path
   end
 
   private

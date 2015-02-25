@@ -1,11 +1,16 @@
   <% @items.each do |item| %>
   <div class="row">
     <div id="leftCol" class="col-xs-9">
-      <h3><%= item.item_type.name %>: <%= item.title %></h3>
+      <h3><%= item.item_type_name %>: <%= item.title %></h3>
+      <% if item.completed? %>
+        <p>This item has been completed.</p>
+      <% else %>
+       <p>Still need to read/watch this.</p>
+      <% end %>
     </div>
 
     <div id="rightcol" class="col-xs-3">
-      <p><%= image_tag(item.image_url, alt: "", :class => 'thumb')  %></p> 
+      <p><%= image_tag(item.image_url, alt: "", class: 'thumb')  %></p> 
     </div>
   </div>  
 

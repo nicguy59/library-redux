@@ -11,12 +11,13 @@
   <% end %>
 
   <div class='field'>
-    <%= f.label :item_type, 'What type of item is this?' %>
+    <%= f.label :item_type, class: 'lable' %>
+    <!--<%= f.label :item_type, 'What type of item is this?' %> -->
     <%= f.collection_select :item_type_id, ItemType.all, :id, :name %>
   </div>
 
   <div class='field'>
-    <%= f.label :title, 'Title' %>
+    <%= f.label :title, class: 'lable' %>
     <%= f.text_field :title %>
   </div>
 
@@ -27,7 +28,7 @@
 
   <div class='field'>
     <%= f.label :completed_on, 'Completed On' %>
-    <%= f.date_select :completed_on %>
+    <%= f.date_select :completed_on, include_blank: true %>
   </div>
 
 
