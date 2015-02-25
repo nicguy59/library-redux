@@ -1,0 +1,26 @@
+=begin
+<%= simple_form_for @user_basic, url: create_basic_examples_url, as: 'user_basic' do |f| %>
+<%= f.error_notification %>
+<%= f.input :email, placeholder: 'Enter email' %>
+<%= f.input :password, placeholder: 'Password' %>
+<%= f.input :file, as: :file %>
+<%= f.input :active %>
+<%= f.input :choices, as: :check_boxes,
+collection: ["Option one is this and that—be sure to include why it's great", "Option two can be something else and selecting it will deselect option one"] %>
+<%= f.input :sex, as: :radio_buttons,
+collection: ["Male", "Female"] %>
+<%= f.button :submit %>
+<% end %>
+
+<%= bootstrap_form_for @item do |f| %>
+  <%= f.label :item_type, 'What type of item is this?' %>
+  <%= f.collection_select :item_type_id, ItemType.all, :id, :name %><br>
+  <%= f.label :title, 'Title'  %>
+  <%= f.text_field :title %>
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+  <%= f.label :completed_on, 'Completed On' %>
+  <%= f.date_select :completed_on %>
+  <%= f.submit 'Save' %>
+<% end %>
+=end
