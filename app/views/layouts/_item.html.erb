@@ -1,0 +1,26 @@
+  <% @items.each do |item| %>
+  <div class="row">
+    <div id="leftCol" class="col-xs-9">
+      <h3><%= item.item_type.name %>: <%= item.title %></h3>
+    </div>
+
+    <div id="rightcol" class="col-xs-3">
+      <p><%= image_tag(item.image_url, alt: "", :class => 'thumb')  %></p> 
+    </div>
+  </div>  
+
+  <div class="row">
+   <div class="col-xs-12">
+  
+    <p>
+    <%= link_to 'Edit', edit_item_path(item) %>
+    *
+    <%= link_to 'Delete', item_path(item), method: :delete %>
+    </p>
+
+    <p>Click here for more about: <%= link_to(item.title, item_path(item)) %>
+    </p>
+    <hr />
+   </div> 
+  </div>
+  <% end %>

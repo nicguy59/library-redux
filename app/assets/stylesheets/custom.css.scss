@@ -34,35 +34,74 @@ textarea {
 }
 
 body {
-  color: #009;	
+  color: #009;
+  text-align: center;
 }
 
-.leftCol {
-  float:left; width: 50%;
+h1 {
+  text-align: center;
 }
+
+hr {border-color: #000099;  /*line color in Chrome and Safari */ 
+    color: #000099;  /*line color in IE7+*/
+    background-color: #000099; /*line color in Firefox/Opera*/
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    /*border-style: inset;*/
+    border-width: 2px;
+} 
+
+.leftCol {
+     float:left; width: 50%;
+}
+
 .rightCol {
-  padding: 1px 20px 20px;
-  margin-left: 52%;
-  overflow: auto;
+     padding: 1px 20px 20px;
+     margin-left: 52%;
+     overflow: auto;
 }
 
 img.thumb {
-	max-width: 200px;
-	width: auto;
-	max-height: 200px;
-	height: auto;
+	   max-width: 200px;
+	   width: auto;
+	   max-height: 200px;
+	   height: auto;
 }
 
 img.bigPic {
-	max-width: 400px;
-	width: auto;
-	max-height: 400px;
-	height: auto;
+	   max-width: 400px;
+	   width: auto;
+	   max-height: 400px;
+	   height: auto;
 }
 
-label {float: left;
-       display: block;
-     text-align: right;
-     width: 100px;
-     padding-right: 10px;
+label {
+    float: left;
+    display: block;
+    text-align: right;
+    width: 100px;
+    padding-right: 10px;
 }
+
+footer {
+    text-align: center;
+}
+
+footer hr {
+    border-color: #000099;  /*line color in Chrome and Safari */ 
+    color: #000099;  /*line color in IE7+*/
+    background-color: #000099; /*line color in Firefox/Opera*/
+    /* display: block; */
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 1px;
+} 
+
+/*div {
+    border:2px solid red;
+}*/
