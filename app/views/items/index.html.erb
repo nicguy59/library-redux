@@ -2,22 +2,30 @@
 
 <p>We have <%= @items.count %> Items!</p>
 
-
-<p><%= link_to 'New Item', new_item_path %></p>
-<br>
-<% @items.each do |item| %>
-<h3><%= item.item_type.name %>: <%= item.title %></h3>
-<p><%= simple_format(item.body) %></p>
-
-<p><%= image_tag(item.image_url, alt: "", :class => 'thumb')  %></p> 
-
-<p>
-<%= link_to 'Edit', edit_item_path(item) %>
-*
-<%= link_to 'Delete', item_path(item), method: :delete %>
-</p>
-<p>
-<%= link_to(item.title, item_path(item)) %>
-</p>
-
+<div class="container">
+  <div class="row">
+    <div id="leftCol" class="col-xs-9">
+      <p><%= link_to 'New Item', new_item_path %></p>
+      <br>
+      <% @items.each do |item| %>
+      <h3><%= item.item_type.name %>: <%= item.title %></h3>
+      <p><%= simple_format(item.body) %></p>
+    </div>
+    <div id="rightcol" class="col-xs-3">
+      <p><%= image_tag(item.image_url, alt: "", :class => 'thumb')  %></p> 
+    </div>
+  </div>  
+  <div class="row">
+   <div class="col-xs-12">
+    <p>
+    <%= link_to 'Edit', edit_item_path(item) %>
+    *
+    <%= link_to 'Delete', item_path(item), method: :delete %>
+    </p>
+    <p>
+    <%= link_to(item.title, item_path(item)) %>
+    </p>
+   </div> 
+  </div>  
+</div>
 <% end %>

@@ -1,22 +1,31 @@
 <h1><%= @items.title %></h1>
 
-This is a
-<%= @items.item_type.name %>
-</p>
+<div class="container">
+  <div class="row">
+    <div id="leftCol" class="col-xs-9">
+      This is a
+      <%= @items.item_type.name %>
+      </p>
 
-<p>
-<%= @items.body %>
-</p>
+      <p>
+      <%= @items.body %>
+      </p>
+    </div>
+    <div id="rightcol" class="col-xs-3">
+      <p><%= image_tag(@items.image_url, alt: "", :class => 'bigPic')  %></p> 
+    </div>
+  </div>  
+  <div class="row">
+   <div class="col-xs-12">
+     <p>Completed on: <%= (@items.completed_on) %>.</p>
 
-<p><%= image_tag(@items.image_url, alt: "", :class => 'bigPic')  %></p> 
-
-<p>Completed on: <%= (@items.completed_on) %>.</p>
-
-<p>
-<%= link_to 'Edit', edit_item_path(@items) %>
-*
-<%= link_to 'Delete', item_path(@items), method: :delete %>
-</p>
-
+     <p>
+     <%= link_to 'Edit', edit_item_path(@items) %>
+     *
+     <%= link_to 'Delete', item_path(@items), method: :delete %>
+     </p>
+   </div>
+  </div>
+</div>    
 <hr>
 <p><%= link_to 'Home', root_path %></p>
