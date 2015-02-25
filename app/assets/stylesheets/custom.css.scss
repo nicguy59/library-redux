@@ -1,0 +1,52 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* Mikey's Tinkering */
+
+.navbar-inverse {
+  background-color: #009;
+  color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+}
+
+body {
+  color: #009;	
+}
+
+img.thumb {
+	max-width: 200px;
+	width: auto;
+	max-height: 200px;
+	height: auto;
+}
+
+img.bigPic {
+	max-width: 400px;
+	width: auto;
+	max-height: 400px;
+	height: auto;
+}

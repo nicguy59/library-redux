@@ -9,7 +9,8 @@
 <h3><%= item.item_type.name %>: <%= item.title %></h3>
 <p><%= simple_format(item.body) %></p>
 
-<p><%= image_tag(item.image_url, alt: "")  %></p> 
+<p><%= image_tag(item.image_url, alt: "", :class => 'thumb')  %></p> 
+
 <p>
 <%= link_to 'Edit', edit_item_path(item) %>
 *

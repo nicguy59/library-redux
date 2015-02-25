@@ -7,7 +7,16 @@ This is a
 <p>
 <%= @items.body %>
 </p>
+
+<p><%= image_tag(@items.image_url, alt: "", :class => 'bigPic')  %></p> 
+
 <p>Completed on: <%= (@items.completed_on) %>.</p>
+
+<p>
+<%= link_to 'Edit', edit_item_path(@items) %>
+*
+<%= link_to 'Delete', item_path(@items), method: :delete %>
+</p>
 
 <hr>
 <p><%= link_to 'Home', root_path %></p>
