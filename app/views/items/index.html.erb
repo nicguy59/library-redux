@@ -3,7 +3,7 @@
     <h1>Items in the Library</h1>
 
     <p>We have <%= @items.count %> Items!</p>
-    <p><%= link_to 'New Item', new_item_path %></p>
+    <p><%= link_to 'New Item', new_item_type_item_path(@item_type) %></p>
    </div>
   </div>
   <div>

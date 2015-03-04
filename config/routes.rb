@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :items
+  resources :item_types, only: [:index, :show] do
+    resources :items
+  end  
 
-  root "items#index"
+  root "item_types#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
