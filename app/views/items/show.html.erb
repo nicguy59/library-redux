@@ -19,9 +19,9 @@
      <p>Completed on: <%= (@items.completed_on) %>.</p>
 
      <p>
-     <%= link_to 'Edit', edit_item_path(@items) %>
+     <%= link_to 'Edit', edit_item_type_item_path %>
      *
-     <%= link_to 'Delete', item_path(@items), method: :delete %>
+     <%= link_to 'Delete', item_type_item_path, method: :delete %>
      </p>
    </div>
   </div> 
