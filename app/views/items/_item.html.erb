@@ -1,6 +1,6 @@
     <div class="row">
     <div id="leftCol" class="col-xs-9">
-      <h3><%= item_type_item_name %>: <%= item.title %></h3>
+      <h3><%= item.item_type_name %>: <%= item.title %></h3>
       <% if item.completed? %>
         <p>This item has been completed.</p>
       <% else %>
@@ -17,12 +17,12 @@
    <div class="col-xs-12">
   
     <p>
-    <%= link_to 'Edit', edit_item_path(item) %>
+    <%= link_to 'Edit', edit_item_type_item_path(item.item_type, item) %>
     *
-    <%= link_to 'Delete', item_path(item), method: :delete %>
+    <%= link_to 'Delete', item_type_item_path(item.item_type, item), method: :delete %>
     </p>
 
-    <p>Click here for more about: <%= link_to(item.title, item_path(item)) %>
+    <p>Click here for more about: <%= link_to(item.title, item_type_item_path(item.item_type, item)) %>
     </p>
     <hr />
    </div> 

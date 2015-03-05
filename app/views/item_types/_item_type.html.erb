@@ -1,5 +1,6 @@
 <p><%= link_to 'Add a new one', new_item_type_item_path(item_type) %></p>
 
   <% item_type.items.each do |item| %>
+    <%= render item %>
     <p><%= link_to item.title, item_type_item_path(item_type, item) %></p>
   <% end %>
