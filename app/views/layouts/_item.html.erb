@@ -1,7 +1,7 @@
-  <% @items.each do |item| %>
+  <% @item_types.each do |item| %>
   <div class="row">
     <div id="leftCol" class="col-xs-9">
-      <h3><%= item.item_type_name %>: <%= item.title %></h3>
+      <h3><%= item_type_item_name %>: <%= item.title %></h3>
       <% if item.completed? %>
         <p>This item has been completed.</p>
       <% else %>
