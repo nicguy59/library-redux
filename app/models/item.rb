@@ -16,7 +16,7 @@ class Item < ActiveRecord::Base
   end
 
   def get_image
-    puts "Get an Image!"
+    logger.debug "Get an Image!"
     update_attribute(:image_url, ImageFetcher.new.fetch(title))
   end
 end

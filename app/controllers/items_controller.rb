@@ -31,7 +31,7 @@ class ItemsController < ApplicationController
 
    def update
     @item = update_attributes(params[:id])
-    @item.get_image unless !@item.image_url.nil?
+    @item.get_image if @item.image_url.nil?
       if @item.update_attributes(item_params)
         redirect_to root_path, notice: "Sucess!  We saved #{@item.title}!!"
       else
